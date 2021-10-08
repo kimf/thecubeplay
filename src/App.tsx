@@ -9,7 +9,7 @@ const httpLink = new HttpLink({
 });
 
 const wsLink = new WebSocketLink({
-  uri: 'ws://thecube.daresaycloud.co/graphql',
+  uri: 'wss://thecube.daresaycloud.co/graphql',
   options: {
     reconnect: true,
   },
