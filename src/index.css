@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+table {
+  padding: 2.5vh;
+  margin: auto;
+}
+
+td {
+  width: 23vh;
+  height: 23vh;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.control-panel {
+  position: absolute;
+  z-index: 1000;
+  right: 20px;
+  top: 20px;
+
+  background: #222;
+  padding: 10px 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.control-panel label {
+  margin-bottom: 10px;
+  padding: 4px;
+  background: #444;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+}
+.control-panel label span {
+  flex: 1;
+}
+.control-panel label input {
+  width: 60px;
 }
